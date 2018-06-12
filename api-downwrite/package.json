@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "build": "babel src --out-dir dist",
+    "postbuild": "cp private.key dist/private.key",
     "predev": "yarn build",
     "deploy": "now && now alias",
     "start": "node dist/server.js",

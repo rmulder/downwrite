@@ -5,6 +5,7 @@
 	"author": "Charles ⚡ <charlespeters42@gmail.com>",
 	"repository": "charlespeters/downwrite",
 	"scripts": {
+		"predeploy": "cpx private.key api-downwrite/dist/ && cpx private.key redownwrite/",
 		"precommit": "lint-staged",
 		"analysis": "flow check",
 		"dev": "bolt ws dev",
@@ -15,6 +16,7 @@
 	},
 	"devDependencies": {
 		"bolt": "^0.20.5",
+		"cpx": "^1.5.0",
 		"flow-bin": "^0.72.0",
 		"husky": "^0.14.3",
 		"lint-staged": "^7.0.5",
